@@ -1,0 +1,169 @@
+
+/**** mobile-first, min-width = 360px ****/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-size: 20px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  background-color: #B0C4DE;
+}
+
+/* todo-top */
+.todo-icon {
+  padding-top: 40px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.todo-icon > .list {
+  color: #191970;
+  font-size: 2em;
+  margin-right: 5px;
+}
+.todo-icon > .pen {
+  color: #2F4F4F;
+  font-size: 1.3em;
+}
+.title {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #191970;
+  margin-left: -10px;
+  margin-bottom: 40px;
+}
+.title > .item-length {
+  background-color: #DAA520;
+  border-radius: 50%;
+  font-size: 14px;
+  display: inline-block;
+  width: 22px; height: 22px;
+  padding-top: 3px;
+  margin-left: 8px;
+}
+
+/* todo-list-item */
+ul {
+  width:100%;
+  margin: 20px 0px 20px;
+  padding: 0px;
+}
+li {
+  list-style:none;
+  background-color: #4682B4;
+  height: 50px;
+  border-bottom: 2px solid #191970;
+  border-top: 2px solid #5F9EA0; 
+  font-size: 1.2em;
+  color: #f0fff0;
+  padding: 15px 20px;
+}
+
+/* todo-bottom-form */
+/* .add-item, .recovery, input[type="text"], input[type="submit"] */
+input {
+  border-radius: 8px;
+  padding: 10px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  border: none;
+}
+/* .add-item, .recovery, input[type="submit"] */
+input.add-item:hover, input.recovery:hover, input[type="submit"]:hover {
+  cursor: pointer;
+}
+/* .add-item */
+input.add-item {
+  border: 1px solid #191970;
+  background-color: #191970;
+  color: #f0fff0;
+  width: 80px;
+  font-size: 20px; 
+  margin-left: 260px;
+  transition: background-color 0.7s;
+  transition: border-radius 0.5s;
+}
+input.add-item:hover {
+  color: #191970;
+  background-color: rgba(25, 25, 112, 0.5);
+  border-radius: 0%;
+}
+/* .recovery */
+input.recovery {
+  margin-left: 273px;
+  margin-bottom: 10px;
+  font-size: 19px;
+  background-color: #8FBC8F;
+  height: 45px;
+  transition: opacity 0.7s;
+}
+/* input[type="text"], input[type="submit"] */
+div.submit-item {
+  display: flex;
+}
+input.recovery:hover, input[type="submit"]:hover {
+  opacity: 0.5;
+}
+/* input[type="text"] */
+input[type="text"] {
+  display: block;
+  margin-left: 15px;
+  margin-right: 6px;
+  width: 70%;
+  background-color: #191970;
+  outline: none;
+  font-size: 20px;
+  height: 40px;
+  color: #f0fff0;
+}
+/* input[type="submit"] */
+input[type="submit"] {
+  width: 75px; height: 40px;
+  font-size: 19px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background-color: #FF8C00;
+  transition: opacity 0.7s;
+}
+
+
+/* add in jquery */
+.alert-word {
+  color: #b22222;
+  font-size: 18px;
+  position: relative;
+  top: 50px;
+  left: 25px;
+}
+.selected {
+  background: url('image/trash.png') no-repeat right;
+  background-size: 60px 47px;
+  list-style:none;
+  background-color: #708090;;
+  height: 50px;
+  border-bottom: 1px solid #c0c0c0;
+  border-top: 2px solid #696969; 
+  font-size: 1.2em;
+  color: #f0fff0;
+  padding: 15px 20px;
+}
+
+
+/**** 螢幕尺寸 > 360px ****/
+@media(min-width: 360px) {
+  body {
+    background-color:#191970;
+  }
+  .todo-list {
+    background-color: #B0C4DE;
+    width: 360px;
+    margin: 30px auto;
+    padding: 30px 0px 30px 0px;
+  }
+  .image {
+    margin-top: 0px;
+  }
+}
